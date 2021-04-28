@@ -1,24 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleProgressBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ova-fm-WPu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-mA-dUN">
+                                        <rect key="frame" x="17" y="54" width="76" height="76"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="OaL-et-zXp"/>
+                                            <constraint firstAttribute="height" constant="76" id="bxr-aS-jUU"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Renda variável" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qat-W6-28Z">
+                                        <rect key="frame" x="16" y="22" width="137" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0S-84-YCV">
+                                        <rect key="frame" x="109" y="54" width="2" height="76"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2" id="1Hs-LM-5Kq"/>
+                                            <constraint firstAttribute="height" constant="76" id="5RH-S7-hQ4"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor investido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulC-34-TBV">
+                                        <rect key="frame" x="127" y="54" width="84" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 5.940,60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzo-6V-Nrd">
+                                        <rect key="frame" x="127" y="69" width="82" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo Alocado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivn-v7-AvW">
+                                        <rect key="frame" x="127" y="94" width="99" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 6.000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqK-Pt-3QX">
+                                        <rect key="frame" x="127" y="108.5" width="71.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDe-uU-Hi4">
+                                        <rect key="frame" x="215" y="66.5" width="20" height="22"/>
+                                        <state key="normal" image="info.circle" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9g-gD-v8I">
+                                        <rect key="frame" x="242" y="99.5" width="117" height="30"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="fAr-3d-yVx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="ADICIONAR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ulC-34-TBV" firstAttribute="leading" secondItem="a0S-84-YCV" secondAttribute="trailing" constant="16" id="0qt-rW-0By"/>
+                                    <constraint firstItem="qat-W6-28Z" firstAttribute="leading" secondItem="ova-fm-WPu" secondAttribute="leading" constant="16" id="2p8-1T-b0U"/>
+                                    <constraint firstItem="Rzo-6V-Nrd" firstAttribute="top" secondItem="ulC-34-TBV" secondAttribute="bottom" id="B2X-0U-eRR"/>
+                                    <constraint firstAttribute="height" constant="158" id="Ele-bh-j9O"/>
+                                    <constraint firstItem="bDe-uU-Hi4" firstAttribute="leading" secondItem="ulC-34-TBV" secondAttribute="trailing" constant="4" id="GN2-sl-fR2"/>
+                                    <constraint firstItem="A9g-gD-v8I" firstAttribute="top" secondItem="bDe-uU-Hi4" secondAttribute="bottom" constant="11" id="Gzf-4G-jTm"/>
+                                    <constraint firstAttribute="bottom" secondItem="uBb-mA-dUN" secondAttribute="bottom" constant="28" id="Hfv-5S-cQU"/>
+                                    <constraint firstItem="ulC-34-TBV" firstAttribute="top" secondItem="qat-W6-28Z" secondAttribute="bottom" constant="8" id="Moy-AR-uxF"/>
+                                    <constraint firstItem="a0S-84-YCV" firstAttribute="top" secondItem="qat-W6-28Z" secondAttribute="bottom" constant="8" id="N1T-gw-QrQ"/>
+                                    <constraint firstItem="qat-W6-28Z" firstAttribute="top" secondItem="ova-fm-WPu" secondAttribute="top" constant="22" id="Od8-EB-6IP"/>
+                                    <constraint firstItem="uBb-mA-dUN" firstAttribute="leading" secondItem="ova-fm-WPu" secondAttribute="leading" constant="17" id="S1T-Si-ULf"/>
+                                    <constraint firstItem="Ivn-v7-AvW" firstAttribute="top" secondItem="Rzo-6V-Nrd" secondAttribute="bottom" constant="8" id="V6t-ZO-YIE"/>
+                                    <constraint firstItem="Ivn-v7-AvW" firstAttribute="leading" secondItem="a0S-84-YCV" secondAttribute="trailing" constant="16" id="Z3A-DB-YRT"/>
+                                    <constraint firstItem="EqK-Pt-3QX" firstAttribute="leading" secondItem="a0S-84-YCV" secondAttribute="trailing" constant="16" id="cPN-Fo-R3d"/>
+                                    <constraint firstItem="uBb-mA-dUN" firstAttribute="top" secondItem="qat-W6-28Z" secondAttribute="bottom" constant="8" id="do9-lx-jZ2"/>
+                                    <constraint firstItem="Rzo-6V-Nrd" firstAttribute="leading" secondItem="a0S-84-YCV" secondAttribute="trailing" constant="16" id="hmE-g0-KiZ"/>
+                                    <constraint firstItem="EqK-Pt-3QX" firstAttribute="top" secondItem="Ivn-v7-AvW" secondAttribute="bottom" id="k76-g0-KpA"/>
+                                    <constraint firstItem="A9g-gD-v8I" firstAttribute="leading" secondItem="Ivn-v7-AvW" secondAttribute="trailing" constant="16" id="nCQ-EU-RSd"/>
+                                    <constraint firstAttribute="trailing" secondItem="A9g-gD-v8I" secondAttribute="trailing" constant="16" id="u9u-wF-gCb"/>
+                                    <constraint firstItem="a0S-84-YCV" firstAttribute="leading" secondItem="uBb-mA-dUN" secondAttribute="trailing" constant="16" id="vLH-kd-IyD"/>
+                                    <constraint firstItem="bDe-uU-Hi4" firstAttribute="centerY" secondItem="Rzo-6V-Nrd" secondAttribute="centerY" id="vcr-77-E9X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="ova-fm-WPu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8aa-gW-b91"/>
+                            <constraint firstItem="ova-fm-WPu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MSd-3R-Z0K"/>
+                            <constraint firstItem="ova-fm-WPu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QRQ-sz-bPx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="A9g-gD-v8I" id="h8a-fk-bGe"/>
+                        <outlet property="circleProgressBarView" destination="uBb-mA-dUN" id="D1H-9a-9nH"/>
+                        <outlet property="infoButton" destination="bDe-uU-Hi4" id="2nL-vZ-fjH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-14.492753623188406" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
